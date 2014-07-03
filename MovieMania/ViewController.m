@@ -30,7 +30,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	[self viewWillAppear:animated];
+	[super viewWillAppear:animated];
 	[self.leftPlayer addMovieLayerTo:self.lView.layer];
 	[self.rightPlayer addMovieLayerTo:self.rView.layer];
 	while (!(self.leftPlayer.readyToDisplay && self.rightPlayer.readyToDisplay))

@@ -10,9 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface MoviePlayer : NSObject
-@property (nonatomic, strong) AVPlayerItem *playerItem;
-@property (nonatomic, strong) AVPlayer *player;
-@property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @property (nonatomic, assign) CMTime duration;
 @property (nonatomic, assign) NSTimeInterval loopStart;
 @property (nonatomic, assign) NSTimeInterval loopEnd;

@@ -8,6 +8,12 @@
 
 #import "MoviePlayer.h"
 
+@interface MoviePlayer ()
+@property (nonatomic, strong) AVPlayerItem *playerItem;
+@property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) AVPlayerLayer *playerLayer;
+@end
+
 @implementation MoviePlayer
 - (id)initWithMovie:(NSString *)filename {
 	if ((self = [super init]) == nil)
