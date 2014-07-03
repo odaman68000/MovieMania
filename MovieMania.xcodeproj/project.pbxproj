@@ -16,6 +16,7 @@
 		724FEAD719656A34002997F8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724FEAD619656A34002997F8 /* AVFoundation.framework */; };
 		724FEAD919656E33002997F8 /* movie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 724FEAD819656E33002997F8 /* movie1.mp4 */; };
 		724FEADD19656F95002997F8 /* movie2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 724FEADC19656F95002997F8 /* movie2.mp4 */; };
+		724FEAE019659895002997F8 /* MoviePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FEADF19659895002997F8 /* MoviePlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		724FEAD619656A34002997F8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		724FEAD819656E33002997F8 /* movie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie1.mp4; sourceTree = "<group>"; };
 		724FEADC19656F95002997F8 /* movie2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie2.mp4; sourceTree = "<group>"; };
+		724FEADE19659895002997F8 /* MoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayer.h; sourceTree = "<group>"; };
+		724FEADF19659895002997F8 /* MoviePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 			children = (
 				724FEAD819656E33002997F8 /* movie1.mp4 */,
 				724FEADC19656F95002997F8 /* movie2.mp4 */,
+				724FEADE19659895002997F8 /* MoviePlayer.h */,
+				724FEADF19659895002997F8 /* MoviePlayer.m */,
 				724FEAB719656A03002997F8 /* AppDelegate.h */,
 				724FEAB819656A03002997F8 /* AppDelegate.m */,
 				724FEABA19656A03002997F8 /* ViewController.h */,
@@ -228,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				724FEABC19656A03002997F8 /* ViewController.m in Sources */,
+				724FEAE019659895002997F8 /* MoviePlayer.m in Sources */,
 				724FEAB919656A03002997F8 /* AppDelegate.m in Sources */,
 				724FEAB619656A03002997F8 /* main.m in Sources */,
 			);
