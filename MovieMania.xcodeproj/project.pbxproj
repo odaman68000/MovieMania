@@ -13,6 +13,9 @@
 		724FEABF19656A03002997F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724FEABD19656A03002997F8 /* Main.storyboard */; };
 		724FEAC119656A03002997F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 724FEAC019656A03002997F8 /* Images.xcassets */; };
 		724FEACD19656A04002997F8 /* MovieManiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FEACC19656A04002997F8 /* MovieManiaTests.m */; };
+		724FEAD719656A34002997F8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724FEAD619656A34002997F8 /* AVFoundation.framework */; };
+		724FEAD919656E33002997F8 /* movie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 724FEAD819656E33002997F8 /* movie1.mp4 */; };
+		724FEADD19656F95002997F8 /* movie2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 724FEADC19656F95002997F8 /* movie2.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		724FEAC619656A04002997F8 /* MovieManiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieManiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		724FEACB19656A04002997F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		724FEACC19656A04002997F8 /* MovieManiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieManiaTests.m; sourceTree = "<group>"; };
+		724FEAD619656A34002997F8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		724FEAD819656E33002997F8 /* movie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie1.mp4; sourceTree = "<group>"; };
+		724FEADC19656F95002997F8 /* movie2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie2.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724FEAD719656A34002997F8 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +68,7 @@
 		724FEAA719656A03002997F8 = {
 			isa = PBXGroup;
 			children = (
+				724FEAD619656A34002997F8 /* AVFoundation.framework */,
 				724FEAB219656A03002997F8 /* MovieMania */,
 				724FEAC919656A04002997F8 /* MovieManiaTests */,
 				724FEAB119656A03002997F8 /* Products */,
@@ -79,6 +87,8 @@
 		724FEAB219656A03002997F8 /* MovieMania */ = {
 			isa = PBXGroup;
 			children = (
+				724FEAD819656E33002997F8 /* movie1.mp4 */,
+				724FEADC19656F95002997F8 /* movie2.mp4 */,
 				724FEAB719656A03002997F8 /* AppDelegate.h */,
 				724FEAB819656A03002997F8 /* AppDelegate.m */,
 				724FEABA19656A03002997F8 /* ViewController.h */,
@@ -197,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				724FEABF19656A03002997F8 /* Main.storyboard in Resources */,
+				724FEADD19656F95002997F8 /* movie2.mp4 in Resources */,
+				724FEAD919656E33002997F8 /* movie1.mp4 in Resources */,
 				724FEAC119656A03002997F8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -320,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
