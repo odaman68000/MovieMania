@@ -19,5 +19,5 @@
 - (void)addMovieLayerTo:(CALayer *)targetLayer;
 - (void)play;
 - (void)pause;
-- (void)seekToTime:(CMTime)time;
+- (void)seekToTime:(NSTimeInterval)time;
 @end

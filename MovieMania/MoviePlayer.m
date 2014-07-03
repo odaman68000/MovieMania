@@ -61,7 +61,7 @@
 	[self.player pause];
 }
 
-- (void)seekToTime:(CMTime)time {
-	[self.player seekToTime:time];
+- (void)seekToTime:(NSTimeInterval)time {
+	[self.player seekToTime:CMTimeMake(time, 1)];
 }
 @end

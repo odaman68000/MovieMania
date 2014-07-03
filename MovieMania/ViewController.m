@@ -16,8 +16,11 @@
 @property (nonatomic, weak) IBOutlet UISlider *urSlider;
 @property (nonatomic, weak) IBOutlet UISlider *llSlider;
 @property (nonatomic, weak) IBOutlet UISlider *lrSlider;
+@property (nonatomic, weak) IBOutlet UIView *dragBar;
 @property (nonatomic, strong) MoviePlayer *leftPlayer;
 @property (nonatomic, strong) MoviePlayer *rightPlayer;
+@property (nonatomic, assign) BOOL dragging;
+@property (nonatomic, assign) CGPoint pointInBar;
 @end
 
 @implementation ViewController
@@ -45,16 +48,38 @@
 	[self.rightPlayer play];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self.view];
+	if (CGRectContainsPoint(self.dragBar.frame, location))
+		self.dragging = YES;
+	self.pointInBar = [self.view convertPoint:location toView:self.dragBar];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+	if (!self.dragging)
+		return;
+	CGRect rect = self.dragBar.frame;
+	UITouch *touch = [touches anyObject];
+	rect.origin = [touch locationInView:self.view];
+	rect.origin.x -= self.pointInBar.x;
+	rect.origin.y -= self.pointInBar.y;
+	self.dragBar.frame = rect;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	self.dragging = NO;
+}
+
 - (IBAction)sliderChanged:(id)sender {
 	UISlider *slider = (UISlider *)sender;
 	float current = slider.value;
-	CMTime time = CMTimeMake(current, 1);
 	if (slider == self.ulSlider) {
 		self.leftPlayer.loopStart = current;
-		[self.leftPlayer seekToTime:time];
+		[self.leftPlayer seekToTime:current];
 	} else if (slider == self.urSlider) {
 		self.rightPlayer.loopStart = current;
-		[self.rightPlayer seekToTime:time];
+		[self.rightPlayer seekToTime:current];
 	} else if (slider == self.llSlider) {
 		self.leftPlayer.loopEnd = current;
 	} else if (slider == self.lrSlider) {

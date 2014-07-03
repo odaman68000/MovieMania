@@ -51,12 +51,27 @@
                                     <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gfn-ze-Kwb"/>
                                 </connections>
                             </slider>
+                            <view contentMode="scaleToFill" id="snA-XV-O0F">
+                                <rect key="frame" x="154" y="138" width="260" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ワタシの名前はお邪魔虫。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bkZ-05-7cf">
+                                        <rect key="frame" x="15" y="11" width="230" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="dragBar" destination="snA-XV-O0F" id="mNW-5u-dXX"/>
                         <outlet property="lView" destination="kKz-44-Nc7" id="Vcp-pA-TXV"/>
                         <outlet property="llSlider" destination="si6-Cu-AZ0" id="ECw-qw-iWf"/>
                         <outlet property="lrSlider" destination="DDh-7G-0fZ" id="SWD-vN-xI4"/>
